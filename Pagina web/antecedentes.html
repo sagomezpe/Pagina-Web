@@ -1,0 +1,73 @@
+<!-- Cabezal del documento para permitir el uso de textos en castellano -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8"/>
+<meta lang="es"/>
+<title>Antecedentes</title>
+<link href="estilos.css" rel="stylesheet" type="text/css">
+</head>
+    
+<body>   <div class="contenido">
+<h1 class="header"> Invención de la radio</h1> <!-- Titulo del documento con su respectivo estilo-->
+<nav>
+    <!-- Botones de dirección a las diferentes páginas con su respectivo estilo -->
+    <a class="boton" href="index.html" target="_blank">Introducción</a>
+    <a class="boton" href="funcionamiento.html" target="_blank">Funcionamiento</a>
+    <a class="boton" href="antecedentes.html" target="_blank">Antecedentes</a>
+    <a class="boton" href="inventores.html" target="_blank">Inventores</a>
+    <a class="boton" href="historia.html" target="_blank">Historia</a>
+    <a class="boton" href="referencias.html" target="_blank">Referencias</a>
+    <a class="boton" href="mapa.html" target="_blank">Mapa interactivo</a>
+
+    <!-- Lista desplegable-->
+    <select id="menu-dropdown" onchange="window.location.href = this.value;"> <!-- El window.location.href indica que la pagina se abre en la misma pestaña -->
+        <option value="" disabled selected style="display:none;">Menú navegación</option> <!-- El primer elemento lo toma de referencia de nombre y no lo permite usar para navegar -->
+        <option value="index.html">Introducción</option>
+        <option value="funcionamiento.html">Funcionamiento</option>
+        <option value="antecedentes.html">Antecedentes</option>
+        <option value="inventores.html">Inventores</option>
+        <option value="historia.html">Historia</option>
+        <option value="referencias.html">Referencias</option>
+        <option value="mapa.html">Mapa interactivo</option>
+    </select>
+    
+</nav>    
+  
+<!-- Contenedor para un gif -->     
+<div class="gif-container1">
+    <img src="gifs/radio-antigua.gif" alt="GIF estático" class="gif-image">
+</div>    
+    
+<div class="gif-container2">
+    <img src="gifs/radio-nueva.gif" alt="GIF estático" class="gif-image">
+</div>         
+    
+<div class="columna">
+    
+    <p class="titulo-columna"> Musica de radio antigua </p>
+        <!-- MP3 dentro de la misma columna -->
+        <div class="audio-player">
+            <audio controls>
+                <source src="sonidos/i-cant-give-you-anything-but-love-brunswick-records-1937.mp3" type="audio/mpeg"> <!-- Lectura de la cancion -->
+                Tu navegador no soporta la reproducción de audio. <!-- Mensaje de error -->
+            </audio>
+        </div>    
+    
+    <h1 class="titulo-columna">Antecedentes</h1>
+
+    <p class="texto-columna">Antes del descubrimiento de las ondas electromagnéticas y del desarrollo de la comunicación por radio, se propusieron muchos sistemas de telégrafos inalámbricos. Los primeros investigadores no lograron avances considerables al no descubrir o no comprender los efectos físicos responsables de transmitir las señales.</p>
+
+    <p class="texto-columna">En 1872, William Ward obtuvo una patente para un sistema de telegrafía inalámbrica en el que teorizaba que las corrientes de convección de la atmósfera podían transmitir señales como un cable telegráfico. Esta idea fue seguida por Mahlon Loomis, que consideraba el uso de electricidad atmosférica para reemplazar el cable aéreo. Ambas ideas mostraban falta de sustento en teorías científicas.</p>
+
+    <p class="texto-columna">En la década de 1880, Thomas Edison patentó un sistema de inducción electromagnética para que saltaran señales entre un tren en marcha y los cables de telégrafo paralelos a la vía. La idea fue ampliada por Nathan Stubblefield entre 1885 y 1892 y por William Preece; este último logró en 1889 transmitir información de señal Morse a través de 1,6 km de agua.</p>
+    
+    <img src="Imagenes/patente.png" alt="Patente " class="imagen-columna">
+    <p class="texto-referencia">Patente de Thomas Edison para la comuniación inalámbrica barco-costa[4].</p>     
+
+    <p class="texto-columna">En 1880, Alexander Graham Bell y Charles Sumner Tainter registraron patentes para un fotófono, el cual fue el primer método de transmisión de sonido mediante un haz de luz, lo que les permitió enviar el primer mensaje sin el uso de cables.</p>
+    
+</div>
+</div>    
+</body>
+</html>   

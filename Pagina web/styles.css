@@ -1,0 +1,35 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+#map-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+#mapa {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.icono {
+    position: absolute;
+}
+
+.icono-imagen {
+    width: 50px; /* Cambia el tamaño según tus necesidades */
+    height: 50px;
+}
+
+.info-ventana {
+    display: none;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}

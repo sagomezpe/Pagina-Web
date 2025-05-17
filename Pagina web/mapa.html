@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa Interactivo</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body><div class="contenido">
+<h1 class="header"> Invención de la radio</h1> <!-- Titulo del documento con su respectivo estilo-->
+    
+<nav>   <!-- Botones de direccionamiento a las diferentes páginas con su respectivo estilo -->
+    <a class="boton" href="index.html">Introducción</a> <!-- Eliminado target="_blank" -->
+    <a class="boton" href="funcionamiento.html">Funcionamiento</a>
+    <a class="boton" href="antecedentes.html">Antecedentes</a>
+    <a class="boton" href="inventores.html">Inventores</a>
+    <a class="boton" href="historia.html">Historia</a>
+    <a class="boton" href="referencias.html">Referencias</a>
+    <a class="boton" href="mapa.html">Mapa interactivo</a>
+
+    <!-- Lista desplegable-->
+    <select id="menu-dropdown" onchange="window.location.href = this.value;"> <!-- El window.location.href indica que la pagina se abre en la misma pestaña -->
+        <option value="" disabled selected style="display:none;">Menú navegación</option> <!-- El primer elemento lo toma de referencia de nombre y no lo permite usar para navegar -->
+        <option value="index.html">Introducción</option>
+        <option value="funcionamiento.html">Funcionamiento</option>
+        <option value="antecedentes.html">Antecedentes</option>
+        <option value="inventores.html">Inventores</option>
+        <option value="historia.html">Historia</option>
+        <option value="referencias.html">Referencias</option>
+        <option value="mapa.html">Mapa interactivo</option>
+    </select>
+    
+</nav>
+</div>
+    
+    <div id="map-container">
+        <img src="Imagenes/mapa.png" alt="Mapa Interactivo" id="mapa">
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

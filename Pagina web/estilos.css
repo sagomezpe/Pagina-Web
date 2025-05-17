@@ -1,0 +1,368 @@
+@charset "UTF-8";
+
+@font-face { 
+    font-family: Calibri;/* define las fuentes y su prioridad*/          
+}
+
+/* css general de la pagina */
+
+body{
+    background-color: bisque; /* Define un color prestablecido */
+    background-image: url(Imagenes/radio.jpg); /* Selecciona una imagen como fondo de la pagina */
+    background-size: 100%; /* Ajuste automático total en horizontal y vertical */
+    background-repeat: repeat-y; /* Repetir en la dirección vertical */
+}
+
+/* Codigo para modificar el como se muestran los botones en la pantalla */
+
+nav {
+    position: relative; /* Siempre muestra la ventana y en la misma posicion*/
+    margin-top: 0px; /* Margen superior para la navegación */
+    left: 10%; /* Distancia con el margen lateral*/
+    width: 80%;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-sizing: border-box;
+    border: 10px solid rgba(0, 0, 0, 1); /* Borde negro de 10 px */
+    border-radius: 20px; /* Suaviza las esquinas con un radio de 10px */    
+    padding: 10px;
+    z-index: 1100; /* Valor que determina la capa de la ventana, debe ser mayor al de la columna */
+}
+
+.nav-container {
+    margin-bottom: 20px; /* Margen inferior para separar la columna de los botones */
+}
+
+
+.header {
+    position: relative; /* Siempre muestra la ventana*/
+    top: 0; /* Distancia con el margen superior*/
+    left: 10%; /* Distancia con el margen lateral */
+    width: 80%; /* Ajusta el ancho*/
+    padding: 10px; /* Espacio del texto con los bordes */
+    background-color: rgba(180, 100, 0, 0.9); /* Fondo blanco semitransparente */
+    box-sizing: border-box; /* Asegura que el padding se incluya en el ancho total */
+    border: 10px solid rgba(0, 0, 0, 1); /* Borde negro de 10 px */
+    border-radius: 20px; /* Suaviza las esquinas con un radio de 10px */
+    font-size: 50px;  /* Tamaño de la letra */
+    text-align: center; /* Alineacion de la letra */
+    padding: 10px; 
+    z-index: 1100; /* Valor que determina la capa de la ventana, debe ser mayor al de la columna */
+    color: azure;
+}
+
+.boton {
+    font-size: 90%;  /* Tamaño de la letra */
+    text-align: center; /* Alineacion del texto centro*/
+    background-image: url(Imagenes/Boton1.png); /* Selecciona la imagen */
+    background-size: 100% 100%; /* Ajusta la imagen para que se ajuste al tamaño del botón */
+    background-position: center; /* Centra la imagen */;
+    width: 11%; /* Ancho del botón */
+    height: 80px; /* Alto del botón */
+    display: inline-flex; /* Utiliza un contenedor flex para centrar verticalmente el texto */
+    align-items: center; /* Centra verticalmente el contenido del contenedor flex */
+    justify-content: center; /* Centra horizontalmente el contenido del contenedor flex */
+    padding: 5px; /* Espacio del texto con los bordes */
+    margin-left: 1%; /* Espacio del boton con otros elementos */
+    color: #000000; /* Color de letra negro */
+}
+
+.boton:hover {
+    background-image: url(Imagenes/Boton2.png); /* Selecciona la imagen */
+    cursor:pointer; /* Se realiza el cambio cuando el cursor pasa por encima del boton */
+    color: #ffffff; /* Color de letra blanco */
+}
+
+.contenido {
+    text-align: center; /* Centrar el texto */
+}
+
+.titulo-columna {
+    color:black; /* Color del texto*/
+    font-size: 35px; /* Tamaño del texto*/
+    text-align: center; /* Alineacion del texto*/
+    margin-bottom: 20px; /* Espacio entre linea y linea*/
+}
+
+.subtitulo-columna {
+    color:black; /* Color del texto*/
+    font-size: 30px; /* Tamaño del texto*/
+    text-align: center; /* Alineacion del texto*/
+    margin-bottom: 20px;
+}
+
+.texto-columna {
+    color:black; /* Color del texto*/
+    font-size: 25px; /* Tamaño del texto*/
+    text-align: center; /* Alineacion del texto*/
+    margin-bottom: 20px;
+}
+
+.imagen-columna {
+    background-position: center; /* Centra la imagen */;    
+    max-width: 30%; /* Máximo del 30% del ancho de la columna */
+    height: auto; /* Altura automática */
+    margin: 20px auto; /* Margen para separar la imagen del texto de referencia */
+    display: block; /* Para centrar la imagen horizontalmente */
+}
+
+.texto-referencia { 
+    color:black; /* Color del texto*/
+    font-size: 16px; /* Tamaño del texto*/
+    text-align: center; /* Alineacion del texto*/
+}
+
+.columna { 
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco semitransparente */
+    box-sizing: border-box; /* Asegura que el padding se incluya en el ancho total */
+    width: 80%; /* Ajusta el ancho*/
+    position: relative;
+    top: 100px; /* Ajusta la posición de la columna en el eje Y */
+    margin-top: 60px; /* Margen superior fijo para separar la columna de los botones */
+    margin: 0 auto; /* Centra horizontalmente */
+    border: 10px solid rgba(0, 0, 0, 1); /* Borde negro de 10 px */
+    border-radius: 20px; /* Suaviza las esquinas con un radio de 10px */
+    z-index: 1050; /* Valor que determina la capa de la ventana, debe ser menor al del titulo y los botones */
+}
+
+.tabla-contenido {
+    background-color: lightyellow;
+    padding: 10px;
+    border-radius: 10px; /* Bordes redondeados */
+    margin-bottom: 20px; /* Espacio entre la tabla de contenido y el contenido */
+    position: relative; /* Posición relativa para poder ajustar la posición de la tabla de contenido */
+    top: -50px; /* Desplazamiento hacia arriba para que esté antes del contenido */
+}
+
+
+.tabla-contenido ul { /* Salto de la lista */
+    margin: 0;
+    padding: 0;
+    text-align: left; /* Alinea el texto a la izquierda */
+}
+
+.tabla-contenido li { /* Valores del elemento de la lista*/
+
+}
+
+.tabla-contenido a { /* Valores del vinculo */
+    color: black;
+    font-size: 20px;  /* Tamaño de la letra */
+}
+
+.tabla-contenido a:hover {
+    background-color: cornsilk;
+    cursor:pointer; /* Se realiza el cambio cuando el cursor pasa por encima del boton */
+    color:blue;
+}
+
+/* Lista desplegable */
+#menu-dropdown {
+    font-size: 20px;
+    padding: 10px;
+    background-color: lightgoldenrodyellow; /* Color de fondo */
+    margin: 0 auto; /* Centra horizontalmente */
+    border: 5px solid #ccc; /* Borde */
+    border-radius: 5px; /* Bordes redondeados */
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.9); /* Sombra */
+    transition: background-color 1s ease; /* Efecto de transición */
+}
+
+#menu-dropdown:hover {
+    background-color: #f5f5f5; /* Cambio de color al pasar el mouse */
+}
+
+#menu-dropdown option {
+    padding: 5px;
+}
+
+/* Codigo para el mapa */
+
+#map-container {
+    position: relative;
+    left: 15%;
+    width: 70%;
+    height: auto;
+}
+
+#mapa {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.icono {
+    position: absolute;
+}
+
+.icono-imagen {
+    width: 50px; /* Cambia el tamaño según tus necesidades */
+    height: 50px;
+}
+
+.info-ventana {
+    display: none;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    width: 150px;
+}
+
+/* Codigo para gifs */
+.gif-container1 {
+    position: fixed; /* Posición fija en la ventana del navegador */
+    top: 40px; /* Distancia desde la parte superior */
+    left: 1%; /* Lo centra horizontalmente */
+    width: 10%; /* Ancho del GIF */
+    z-index: 1000; /* Asegura que esté por debajo de otros elementos */
+}
+
+.gif-container2 {
+    position: fixed; /* Posición fija en la ventana del navegador */
+    bottom: 0px; /* Distancia desde la parte superior */
+    right: 1%; /* Lo centra horizontalmente */
+    width: 10%; /* Ancho del GIF */
+    z-index: 1000; /* Asegura que esté por debajo de otros elementos */
+}
+
+.gif-image {
+    width: 100%; /* Ancho del GIF */
+    height: auto; /* Altura automática para mantener la proporción */
+    border-radius: 10px; /* Bordes redondeados (opcional) */
+    /* Otros estilos según necesites */
+}
+
+
+/* Codigo para audio */
+.audio-player {
+    position: relative; /* Posición fija en la ventana del navegador */
+    width: 40%; /* Ancho máximo del reproductor */
+    height: 40px;
+    margin: 0px auto; /* Margen para centrar el reproductor */
+
+}
+
+/* Estilos para los controles del reproductor de audio */
+audio {
+    width: 100%;
+}
+
+/* Estilos para los controles personalizados */
+input[type="range"] {
+    width: 10%;
+    -webkit-appearance: none; /* Quita la apariencia predeterminada de los controles */
+    background-color: transparent; /* Fondo transparente */
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Quita la apariencia predeterminada del cursor */
+    width: 10px;
+    height: 20px;
+    background-color: #007bff; /* Color del cursor */
+    cursor: pointer;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+    width: 10%;
+    height: 4px;
+    background-color: #ccc; /* Color de la barra de progreso */
+}
+
+/* Cambia el color de la barra de progreso al interactuar con ella */
+input[type="range"]:hover::-webkit-slider-runnable-track {
+    background-color: #b3b3b3;
+}
+
+
+
+/* Media queries para diferentes tamaños de pantalla */
+
+@media screen and (min-width: 1200px) {
+    
+    #menu-dropdown {
+        display: none;
+    }
+    
+}
+
+@media screen and (min-width: 801px) and (max-width: 1200px) {
+    
+    nav{
+        left: 25%;
+        width: 50%;
+        background-color: rgba(100, 100, 100, 0.9);
+        box-sizing: border-box;
+        border: 10px solid rgba(0, 0, 0, 1); /* Borde negro de 10 px */
+        border-radius: 20px; /* Suaviza las esquinas con un radio de 10px */    
+        padding: 10px;
+    }
+    
+    .header{
+        left: 5%;
+        width: 90%;
+        background-color: rgba(100, 100, 100, 0.9); /* Fondo blanco semitransparente */
+        font-size: 30px;
+    }
+    
+    .columna {
+        width: 90%; /* Ajusta el ancho*/
+        top: 100px;
+    }
+    
+    .tabla-contenido {
+        background-color: azure;
+    }
+    
+    .boton {
+        display: none; /* No usar boton */
+    }
+    
+    #menu-dropdown {
+        display: block; /* Mostrar la lista desplegable */
+    }
+        
+    
+}
+
+@media screen and (max-width: 800px) {
+   
+    nav{
+        left: 10%;
+        width: 80%;
+        background-color: rgba(100, 100, 100, 0.9);
+        box-sizing: border-box;
+        border: 10px solid rgba(0, 0, 0, 1); /* Borde negro de 10 px */
+        border-radius: 20px; /* Suaviza las esquinas con un radio de 10px */    
+        padding: 10px;
+    }
+    
+    .header{
+        left: 0%;
+        width: 100%;
+        background-color: rgba(100, 100, 100, 0.9); /* Fondo blanco semitransparente */
+        font-size: 30px;
+    }
+
+    .columna {
+        top: 100px;
+        width: 100%; /* Ajusta el ancho*/
+    }
+    
+    .tabla-contenido {
+        background-color: azure;
+    }    
+    
+    .boton {
+        display: none; /* No usar boton */
+    }
+    
+    #menu-dropdown {
+        display: block; /* Mostrar la lista desplegable */
+    }
+    
+}
+
+
+
