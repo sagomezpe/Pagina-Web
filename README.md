@@ -1,1 +1,1 @@
-#Prueba
+#Proyecto entregado para la asignatura de grafica interactiva de la Unal, creando una pagina web usando conceptos de html, css y javascript, creando una pagina sobre la historia de la radio, que sea interactiva y adaptada a diferentes tamaños de pantalla
